@@ -15,7 +15,8 @@ class GroupeFixtures extends Fixture
 
             $groupe = new Groupe();
             $groupe->setName('Danse'.$ind);
-            $groupe->setDescription('Groupe composer de'.$ind.'danseur');
+            $groupe->setDescription('Groupe composer de danseur');
+            $groupe->setImage('https://picsum.photos/640/480/?random=4');
             $manager->persist($groupe);
 
             for ($n = 1; $n <= 5; $n++) {
@@ -25,6 +26,7 @@ class GroupeFixtures extends Fixture
                 $membre->setFirstname('Yavuz'.$ind);
                 $membre->setLastname('Kutuk'.$ind);
                 $membre->setPseudo('Kyatuz'.$ind);
+                $membre->setImage('https://picsum.photos/640/480/?random=4');
                 $membre->setGroupe($groupe);
                 $manager->persist($membre);
             }

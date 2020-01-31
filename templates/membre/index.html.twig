@@ -13,6 +13,7 @@
                 <th>Lastname</th>
                 <th>Pseudo</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ membre.lastname }}</td>
                 <td>{{ membre.pseudo }}</td>
                 <td>{{ membre.description }}</td>
+                <td><img style="height: auto; width: 50px" src="{{ membre.image }}" alt=""></td>
                 <td>
                     <a href="{{ path('membre_show', {'id': membre.id}) }}">show</a>
                     <a href="{{ path('membre_edit', {'id': membre.id}) }}">edit</a>
